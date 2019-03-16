@@ -26,6 +26,6 @@ class MovimentacoesController extends Controller
 
     public function cadastraMovimentacoes(Request $request)
     {
-        
+        dd($request->all());
     }
 }

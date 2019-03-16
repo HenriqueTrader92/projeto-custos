@@ -23,19 +23,19 @@
                 {!! csrf_field() !!}
 
                 <div class="form-group">
-                <label for="inputDepartamentos">Departamentos</label><br>
-                <select name="departamentos[]" id="inputDepartamento" class="selectpicker" multiple>
+                <label for="inputDepartamentos">Departamento</label><br>
+                <select name="departamentos" id="inputDepartamento" class="selectpicker">
                     @foreach($departamentos as $departamentos)
-                        <option value="{{$departamentos->id}}">{{ $departamentos->name }}</optionp>
+                        <option value="{{$departamentos->id}}">{{ $departamentos->name }}</option>
                     @endforeach
                 </select>
                 </div>
 
                 <div class="form-group">
-                <label for="inputFuncionarios">Funcionarios</label><br>
-                <select name="funcionarios[]" id="inputFuncionarios" class="selectpicker" multiple>
+                <label for="inputFuncionarios">Funcionario</label><br>
+                <select name="funcionarios" id="inputFuncionarios" class="selectpicker">
                     @foreach($funcionarios as $funcionarios)
-                        <option value="{{$funcionarios->id}}">{{ $funcionarios->name }}</optionp>
+                        <option value="{{$funcionarios->id}}">{{ $funcionarios->name }}</option>
                     @endforeach
                 </select>
                 </div>
