@@ -10,17 +10,18 @@ class Funcionarios extends Model
     protected $table = 'funcionarios';
 
     public static function rules() {
-        $rules = array(
+
+        $error = array(
             'departamentos' => "required",
             'name' => "required|max:200"
         );
 
-        return $rules;
+        return $error;
     }
 
     public static function customMsgRules () {
         $customMessages = [
-            'required' => 'O campo " :attribute " é requerido.'
+            'required' => 'O campo " :attribute " é obrigatório'
         ];
 
         return $customMessages;

@@ -10,11 +10,19 @@ class Departamentos extends Model
     protected $table = 'departamentos';
 
     public static function rules() {
-        $rules = array(
+        $error = array(
             'name' => "max:100|required"
         );
 
-        return $rules;
+        return $error;
+    }
+
+    public static function customMsgRules () {
+        $customMessages = [
+            'required' => 'O campo " :attribute " é obrigatório'
+        ];
+
+        return $customMessages;
     }
 
     public function funcionarios() {

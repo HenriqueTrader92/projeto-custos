@@ -37,7 +37,7 @@ class FuncionariosController extends Controller
         }
         
         return redirect()->back()->with([
-            'success'=>'Funcionario '.$request->name.' criado com sucesso'
+            'error'=>'Funcionario '.$request->name.' criado com sucesso'
         ]);
     }
 }
