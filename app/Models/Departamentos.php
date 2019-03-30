@@ -10,8 +10,24 @@ class Departamentos extends Model
     public $timestamps = false;
     protected $table = 'departamentos';
 
-    public function funcionarios()
-    {
-        return $this->hasMany(Funcionarios::class);
+    public static function rules() {
+        $error = array(
+            'name' => "max:100|required"
+        );
+
+        return $error;
+    }
+
+    public static function customMsgRules () {
+        $customMessages = [
+            'required' => 'O campo " :attribute " é obrigatório'
+        ];
+
+        return $customMessages;
+    }
+
+    public function funcionarios() {
+        return $this->belongsToMany(
+            Funcionarios::class,'funcionarios_departamentos', 'funcionario_id', 'departamento_id');
     }
 }

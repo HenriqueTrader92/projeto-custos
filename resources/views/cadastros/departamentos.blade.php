@@ -14,6 +14,14 @@
 @section('content')
     <div class="box">
         <div class="box-header">
+
+        @if( isset($errors) && count($errors) > 0)
+            <div class="alert alert-danger">
+                @foreach($errors->all() as $error)
+                    <p>{{$error}}</p>
+                @endforeach()
+            </div>
+        @endif
             
         </div>
         <div class="box-body">

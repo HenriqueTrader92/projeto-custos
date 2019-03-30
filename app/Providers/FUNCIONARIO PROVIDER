@@ -1,0 +1,3 @@
+view()->composer('layouts.mostraFunc',function($view) {
+            $view->with('funcionarios',\App\Models\Funcionarios::all());
+        });

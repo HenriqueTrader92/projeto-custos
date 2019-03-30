@@ -1,0 +1,17 @@
+mensagem de feedback
+
+UI e UX
+
+softDelete
+
+partialView
+
+upload de planilha e csv
+
+seed
+
+referencia de JS/CSS para o proprio projeto
+
+endentação
+
+anotacoes auxiliares

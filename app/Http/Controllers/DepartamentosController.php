@@ -23,7 +23,7 @@ class DepartamentosController extends Controller
 
     public function cadastroDepartamento(Request $request)
     {
-        $this->validate($request,Departamentos::rules());
+        $this->validate($request,Departamentos::rules(),Departamentos::customMsgRules());
 
         $novoDepartamento = $this->departamentos;
         $novoDepartamento->name = $request->name;
