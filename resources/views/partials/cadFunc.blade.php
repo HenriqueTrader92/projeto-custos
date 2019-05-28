@@ -4,13 +4,7 @@
     </div>
     <div class="box-body">
 
-    @if( isset($errors) && count($errors) > 0)
-        <div class="alert alert-danger">
-            @foreach($errors->all() as $error)
-                <p>{{$error}}</p>
-            @endforeach()
-        </div>
-    @endif
+    @include('layouts.alerts-erro')
 
         @if($departamentos->count() == 0)
             <form method="GET" action="{{ route('index.departamentos') }}">

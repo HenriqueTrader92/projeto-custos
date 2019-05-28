@@ -1,13 +1,7 @@
 <div class="box">
     <div class="box-header">
     <h3>Cadastrar Departamentos</h3>
-    @if( isset($errors) && count($errors) > 0)
-        <div class="alert alert-danger">
-            @foreach($errors->all() as $error)
-                <p>{{$error}}</p>
-            @endforeach()
-        </div>
-    @endif
+    @include('layouts.alerts-erro')
         
     </div>
     <div class="box-body">
